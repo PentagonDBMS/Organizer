@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useScreenSize } from '../../contexts/ScreenSizeContext'; // Assuming this is implemented
 import avatar from '../../images/tom.jpg';
+import logo from "../../images/logo.png";
 
 const OrgHeader = () => {
     const location = useLocation();
@@ -60,8 +61,13 @@ const OrgHeader = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 )}
-                <Menu.Item as={Link} to="/dashboard">
-                    <Image src='https://react.semantic-ui.com/logo.png' alt='logo' size='mini' style={{ marginRight: '1.5em' }} />
+                <Menu.Item as={Link} to="https://pentagondbms.github.io/UniveristyFest/">
+                   <Image
+                    src={logo}
+                    alt="logo"
+                    size="mini"
+                    style={{ marginRight: "1.5em" }}
+                  />
                 </Menu.Item>
                 {currentUser && !isMobile && (
                     <>
