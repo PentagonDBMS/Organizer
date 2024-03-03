@@ -133,7 +133,7 @@ router.post('/login', loginLimiter, [
                 secure: true,
                 sameSite: 'None',
                 maxAge: 18000000,
-            }).json({ organizerId: organizer.organizer_id });
+            }).json({ organizerId: organizer.organizer_id , name: organizer.name });
         });
     } catch (err) {
         console.error(err.message);
