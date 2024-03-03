@@ -107,14 +107,14 @@ const VolunteersPage = () => {
                 </HeaderContent>
             </Header>
             <Divider />
-            <List>
                 {volunteers.length > 0 ? (
                     <List divided animated size={isMobile ? 'large' : 'massive'}>
-                        {volunteers.map(volunteer => (
+                        {volunteers.map((volunteer, index) => (
                             <EventVolunteerListItem
                                 key={volunteer.volunteer_id}
                                 volunteer={volunteer}
                                 onDelete={handleDelete}
+                                index={index}
                             />
                         ))}
                     </List>
@@ -130,7 +130,6 @@ const VolunteersPage = () => {
                         }
                     </Header>
                 )}
-            </List>
         </Container>
     );
 };
