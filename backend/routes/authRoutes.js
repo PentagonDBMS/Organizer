@@ -91,7 +91,7 @@ router.post('/signup', [
 });
 
 // login endpoint
-router.post('/login', loginLimiter, [
+router.post('/login', [
     body('email').isEmail(),
     body('password').not().isEmpty(),
 ], async (req, res) => {
